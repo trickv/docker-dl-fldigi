@@ -26,4 +26,4 @@ RUN set -ex && \
 RUN set -ex && \
     apt-get purge -y --auto-remove git
 
-ENTRYPOINT ["/usr/bin/dl-fldigi"]
+ENTRYPOINT ["/usr/local/bin/dl-fldigi"]
