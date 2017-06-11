@@ -5,7 +5,8 @@ ENV dl_fldigi_git_url https://github.com/jamescoxon/dl-fldigi
 RUN set -ex && \
     apt-get update && \
     apt-get install -y git && \
-    apt-get build-dep -y fldigi && \
+    apt-get build-dep -y fldigi
+
 
 WORKDIR /tmp
 RUN set -ex && \
