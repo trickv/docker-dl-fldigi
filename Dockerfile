@@ -5,7 +5,9 @@ ENV dl_fldigi_git_url https://github.com/jamescoxon/dl-fldigi
 RUN set -ex && \
     apt-get update && \
     apt-get install -y git && \
-    apt-get build-dep -y fldigi
+    apt-get build-dep -y fldigi && \
+    apt-get install -y automake && \
+	apt-get install -y libcurl4-openssl-dev libjpeg-dev libssl-dev
 
 
 WORKDIR /tmp
@@ -14,7 +16,7 @@ RUN set -ex && \
     cd dl-fldigi && \
     git submodule init && \
     git submodule update && \
-    automake && \
+    autoreconf -vfi && \
     ./configure && \
     make && \
     make install && \
