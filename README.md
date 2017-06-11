@@ -1,4 +1,4 @@
-This is dl-fldigi in a Docker container.
+This is [dl-fldigi](https://github.com/jamescoxon/dl-fldigi) in a Docker container.
 
 dl-fldigi is notoriously difficult to build probably because:
 * It's not hyper-actively maintained
@@ -10,4 +10,6 @@ Since dl-fldigi is a GUI application, and docker will run it as another user, yo
 Learn a bit here: http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/
 
 I run it like this:
-  docker run -v $HOME/.dl_fldigi:/root/.dl_fldigi -v /tmp/.X11-unix:/tmp/.X11-unix -ti -e DISPLAY=$DISPLAY
+```
+docker run -v $HOME/.dl_fldigi:/root/.dl_fldigi -v /tmp/.X11-unix:/tmp/.X11-unix -ti -e DISPLAY=$DISPLAY
+```
