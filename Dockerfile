@@ -1,7 +1,5 @@
 FROM ubuntu:16.04
 
-ENV dl_fldigi_git_url https://github.com/jamescoxon/dl-fldigi
-
 RUN set -ex && \
     apt-get update && \
     apt-get install -y git && \
@@ -9,6 +7,8 @@ RUN set -ex && \
     apt-get install -y automake && \
 	apt-get install -y libcurl4-openssl-dev libjpeg-dev libssl-dev
 
+
+ENV dl_fldigi_git_url https://github.com/jamescoxon/dl-fldigi
 
 WORKDIR /tmp
 RUN set -ex && \
