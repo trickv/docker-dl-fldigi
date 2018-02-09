@@ -1,4 +1,4 @@
-This is [dl-fldigi](https://github.com/jamescoxon/dl-fldigi) in a Docker container.
+This is an attempt at [dl-fldigi](https://github.com/jamescoxon/dl-fldigi) in a Docker container. It doesn't quite work.
 
 dl-fldigi is notoriously difficult to build probably because:
 * It's not hyper-actively maintained
@@ -11,5 +11,5 @@ Learn a bit here: http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-doc
 
 I run it like this:
 ```
-docker run -v $HOME/.dl_fldigi:/root/.dl_fldigi -v /tmp/.X11-unix:/tmp/.X11-unix -ti -e DISPLAY=$DISPLAY
+./run.sh
 ```
